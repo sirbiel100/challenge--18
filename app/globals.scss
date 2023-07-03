@@ -1,0 +1,48 @@
+@import './variables.scss';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  min-height: 100svh; //For browsers that supports svh size
+  min-height: 100vh;
+  width: 100vw;
+  touch-action: pan-y;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: $Red;
+  background-image: url(../public/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1em;
+}
+
+input {
+  border: none;
+  outline: none;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+@media (min-width: 31.5em) {
+  
+  body {
+    background-image: url(../public/bg-intro-desktop.png);
+    background-size: cover;
+  }
+}

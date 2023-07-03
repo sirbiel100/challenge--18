@@ -1,0 +1,273 @@
+@import './variables.scss';
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 5em;
+
+    .textContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.3em;
+        color: white;
+        max-width: 80%;
+
+
+        h1 {
+            font-size: clamp(2.5em, 5vw, 3.5em);
+        }
+
+        p{
+            font-size: clamp(.8em, 3vw, 1em);
+        }
+    }
+
+    .plan{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+        
+
+        .price {
+            background-color: $Blue;
+            padding: 1.5em 2em;
+            border-radius: 8px;
+            box-shadow: 0 6px 2px 0 rgba(0, 0, 0, 0.205);
+
+            p{
+                color: $GrayishBlue;
+                
+                span {
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+            max-width: 92%;
+            padding: 1em 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.219);
+            
+            form {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width: 100%;
+                padding: 1.5em;
+                gap: 1.8em;
+
+                input {
+                    border: 1.5px solid gainsboro;
+                    padding: 1em 2em;
+                    border-radius: 5px;
+                    
+                    &::placeholder {
+                        font-weight: 700;
+                    }
+
+                    &:focus {
+                        border:  1.5px solid $DarkBlue;
+                    }
+                }
+
+                label {
+                    font-size: .6em;
+
+                    //Error Message
+                    &:nth-of-type(1) { //First Name
+                        position: absolute;
+                        top: 7.6em;
+                        right: 2.5em;
+                        color: $Red;
+                    }
+                    &:nth-of-type(3) { //Last Name
+                        position: absolute;
+                        top: 15em;
+                        right: 2.5em;
+                        color: $Red;
+                    }
+                    &:nth-of-type(5) { //Email
+                        position: absolute;
+                        top: 22.5em;
+                        right: 2.5em;
+                        color: $Red;
+                    }
+                    &:nth-of-type(7) { //Password
+                        position: absolute;
+                        top: 30em;
+                        right: 2.5em;
+                        color: $Red;
+                    }
+
+                    /* ========= | ======= */
+
+                    // Error Images
+                    &:nth-of-type(2) { //First Name IMG
+                        position: absolute;
+                        right: 4em;
+                        top: 3.5em;
+                    }
+                    &:nth-of-type(4) { //Last Name IMG
+                        position: absolute;
+                        right: 4em;
+                        top: 11em;
+                    }
+                    &:nth-of-type(6) { //Email IMG
+                        position: absolute;
+                        right: 4em;
+                        top: 18.5em;
+                    }
+
+                    &:nth-of-type(8) { //Password IMG
+                        position: absolute;
+                        right: 4em;
+                        top: 26.2em;
+                    }
+                    /* ========= | ======= */
+                }
+
+
+                button {
+                    padding: 1.5em;
+                    background-color: $Green;
+                    border: none;
+                    color: white;
+                    font-weight: 600;
+                    border-radius: 4px;
+                    box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.219);
+                    border-bottom: 3px solid rgba(0, 0, 0, 0.082);
+                    cursor: pointer;
+
+                    &:active {
+                        transform: translateY(2px);
+                    }
+                }
+            }
+
+            p {
+                font-size: .8em;
+                max-width: 80%;
+                text-align: center;
+                color: $GrayishBlue;
+                span {
+                    cursor: pointer;
+                    color: $Red;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 31.5em) {
+    .section {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+    
+        .textContent{
+            text-align: left;
+            width: auto;
+            max-width: 40%;
+        }
+    
+        .plan{
+    
+            .price {
+                display: flex;
+                justify-content: center;
+                padding: 1em;
+                max-width: 100%;
+                width: 100%;
+            }
+    
+            main {
+                max-width: 100%;
+                padding: 1em;
+                
+                form {
+                    padding: 1.5em;
+                    gap: 2em;
+    
+                    button {
+                        &:hover{
+                            filter: opacity(.8);
+                        }
+                    }
+
+                    label {
+                        font-size: .6em;
+
+                        //Error Message
+                        &:nth-of-type(1) { //First Name
+                            position: absolute;
+                            top: 7.6em;
+                            right: 2.5em;
+                            color: $Red;
+                        }
+                        &:nth-of-type(3) { //Last Name
+                            position: absolute;
+                            top: 15.4em;
+                            right: 2.5em;
+                            color: $Red;
+                        }
+                        &:nth-of-type(5) { //Email
+                            position: absolute;
+                            top: 23.5em;
+                            right: 2.5em;
+                            color: $Red;
+                        }
+                        &:nth-of-type(7) { //Password
+                            position: absolute;
+                            top: 31em;
+                            right: 2.5em;
+                            color: $Red;
+                        }
+
+                        /* ========= | ======= */
+
+                        // Error Images
+                        &:nth-of-type(2) { //First Name IMG
+                            position: absolute;
+                            right: 4em;
+                            top: 3.5em;
+                        }
+                        &:nth-of-type(4) { //Last Name IMG
+                            position: absolute;
+                            right: 4em;
+                            top: 11.5em;
+                        }
+                        &:nth-of-type(6) { //Email IMG
+                            position: absolute;
+                            right: 4em;
+                            top: 19.3em;
+                        }
+
+                        &:nth-of-type(8) { //Password IMG
+                            position: absolute;
+                            right: 4em;
+                            top: 27.2em;
+                        }
+                        /* ========= | ======= */
+                    }
+                }
+    
+                p {
+                    max-width: 90%;
+                }
+            }
+        }
+    }
+
+}
