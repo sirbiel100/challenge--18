@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Click Here](https://www.frontendmentor.io/solutions/component-with-signup-form-nextjs-and-scss-mASxSVw6jw)
 - Live Site URL: [Click Here](https://challenge-18-jperq2ox5-sirbiel100.vercel.app/)
 
 ## My process
